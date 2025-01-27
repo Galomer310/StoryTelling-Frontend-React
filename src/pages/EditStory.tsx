@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { Story } from "../../types/types"; // Import the Story interface
+import { Story } from "../../types/types";
 
 const EditStory = () => {
   const { storyId } = useParams<{ storyId: string }>();

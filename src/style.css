@@ -1,4 +1,4 @@
-/* General Reset and Base Styling */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -92,20 +92,27 @@ input:focus, textarea:focus {
   background: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  display: flex;
+  flex-wrap: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .user-container h1 {
   color: #333;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .user-container p {
   font-size: 1rem;
   color: #555;
+  text-align: center;
 }
 
 .user-container button {
   margin-top: 20px;
+  width: 20%;
 }
 
 /* Login Page Styling */

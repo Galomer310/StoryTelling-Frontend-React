@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Story } from "../../types/types"; // Import the Story interface
+import { Story } from "../../types/types";
 
 const CreateStory = () => {
   const [title, setTitle] = useState<string>("");
@@ -36,7 +36,7 @@ const CreateStory = () => {
 
       // Store the created story in the state
       setStory(data);
-      navigate("/user"); // Optionally, navigate back to home or stories page
+      navigate("/user");
     } catch (error) {
       console.error("Error during story creation:", error);
     }

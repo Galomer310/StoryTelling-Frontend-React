@@ -1,7 +1,7 @@
 // UserPage.tsx
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Story } from "../../../../types/types"; // Import the Story interface
+import { Story } from "../../types/types"; // Import the Story interface
 
 const UserPage = () => {
   const [stories, setStories] = useState<Story[]>([]);

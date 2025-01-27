@@ -199,6 +199,16 @@ input:focus, textarea:focus {
   background-color: #c9302c;
 }
 
+.storyBox {
+  margin: 10px;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #9db3fd;
+}
+
+
 /* Responsive Styling */
 @media (max-width: 768px) {
   header {

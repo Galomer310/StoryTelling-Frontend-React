@@ -74,20 +74,20 @@ const UserPage = () => {
       <h1>Your Dashboard</h1>
       <p>Manage your stories and explore others' creativity.</p>
       <button onClick={handleCreateStory}>Create New Story</button>
-      <h3>Your Stories</h3>
+      <h3>All Users Stories</h3>
       {isLoading ? (
-        <p>Loading your stories...</p>
+        <p>Loading All Users stories... </p>
       ) : (
         <ul>
           {stories.map((story) => (
-            <li key={story.id}>
+            <div className="storyBox" key={story.id}>
               <h4>{story.title}</h4>
               <p>{story.content}</p>
               <button onClick={() => handleEditStory(story.id)}>Edit</button>
               <button onClick={() => handleDeleteStory(story.id)}>
                 Delete
               </button>
-            </li>
+            </div>
           ))}
         </ul>
       )}

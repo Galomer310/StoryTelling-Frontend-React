@@ -13,7 +13,7 @@ const EditStory = () => {
     const fetchStory = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3000/api/stories/${storyId}`,
+          `https://storytellingapp-backend-react.onrender.com/api/stories/${storyId}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -46,7 +46,7 @@ const EditStory = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/api/stories/${storyId}`,
+        `https://storytellingapp-backend-react.onrender.com/api/stories/${storyId}`,
         {
           method: "PUT",
           headers: {
@@ -73,7 +73,7 @@ const EditStory = () => {
   const handleDeleteStory = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/stories/${storyId}`,
+        `https://storytellingapp-backend-react.onrender.com/api/stories/${storyId}`,
         {
           method: "DELETE",
           headers: {

@@ -12,11 +12,14 @@ const UserPage = () => {
   useEffect(() => {
     const fetchUserStories = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/stories", {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-          },
-        });
+        const response = await fetch(
+          "https://storytellingapp-backend-react.onrender.com/api/stories",
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+            },
+          }
+        );
 
         if (!response.ok) {
           const errorData = await response.json();
@@ -46,7 +49,7 @@ const UserPage = () => {
   const handleDeleteStory = async (storyId: number) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/stories/${storyId}`,
+        `https://storytellingapp-backend-react.onrender.com/api/stories/${storyId}`,
         {
           method: "DELETE",
           headers: {

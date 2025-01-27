@@ -14,14 +14,17 @@ const CreateStory = () => {
     const newStory = { title, content };
 
     try {
-      const response = await fetch("http://localhost:3000/api/stories", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        },
-        body: JSON.stringify(newStory),
-      });
+      const response = await fetch(
+        "https://storytellingapp-backend-react.onrender.com/api/stories",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
+          body: JSON.stringify(newStory),
+        }
+      );
 
       if (!response.ok) {
         const errorData = await response.json();

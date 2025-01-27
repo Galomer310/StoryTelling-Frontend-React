@@ -1,6 +1,6 @@
 export const fetchStories = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/stories");
+      const response = await fetch("https://storytellingapp-backend-react.onrender.com");
       if (!response.ok) {
         throw new Error("Failed to fetch stories");
       }

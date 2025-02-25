@@ -16,7 +16,7 @@ const UserPage = () => {
     const fetchUserStories = async () => {
       try {
         // Fetch user details
-        const userResponse = await fetch(`${apiUrl}/api/user`, {
+        const userResponse = await fetch(`${apiUrl}/api/auth/protected`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
           },
